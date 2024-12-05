@@ -50,7 +50,7 @@ if submit:
     # 加载模型和特征
     objective = "prognosis"
     model_path = f"./checkpoint/{objective}/lightgbm_model.pkl"
-    feature_path = f"./data/dataset/{objective}/lightgbm_selected_features.txt"
+    feature_path = f"lightgbm_selected_features.txt"
 
     try:
         lgb_model = joblib.load(model_path)
