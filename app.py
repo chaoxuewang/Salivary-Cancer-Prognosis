@@ -58,8 +58,7 @@ if submit:
         with open(model_path, 'rb') as f:
             lgb_model = joblib.load(f)
     
-        with open(feature_path, 'rb') as f:
-            selected_features = [line.strip() for line in f]
+        selected_features = ['性别-男', '性别-女', '年龄', '发病部位-腮腺', '发病部位-颌下腺', '发病部位-舌下腺+口底', '发病部位-腭', '发病部位-磨牙后区', '发病部位-颊', '发病部位-上颌', '病理类型-高分化粘表', '病理类型-中分化粘表', '病理类型-低分化粘表', '病理类型-腺样囊性癌', '病理类型-癌在多形性腺瘤中', '病理类型-非特异性腺癌', '病理类型-腺泡细胞癌', '病理类型-肌上皮癌', '病理类型-多型性腺癌', '病理类型-唾液腺导管癌', 'T1', 'T2', 'T3', 'T4', 'N0', 'N1']
 
         df_case_info = pd.DataFrame([info_dict])
         data = df_case_info[selected_features]
