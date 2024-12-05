@@ -58,7 +58,7 @@ if submit:
         with open(model_path, 'rb') as f:
             lgb_model = joblib.load(f)
     
-        with open(feature_path, 'r') as f:
+        with open(feature_path, 'rb') as f:
             selected_features = [line.strip() for line in f]
 
         df_case_info = pd.DataFrame([info_dict])
