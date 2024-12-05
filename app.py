@@ -55,7 +55,9 @@ if submit:
     feature_path = f"lightgbm_selected_features.txt"
 
     try:
-        lgb_model = joblib.load(model_path)
+        with open(model_path, 'rb') as f:
+            lgb_model = joblib.load(f)
+    
         with open(feature_path, 'r') as f:
             selected_features = [line.strip() for line in f]
 
