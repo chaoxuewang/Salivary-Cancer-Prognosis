@@ -51,7 +51,7 @@ if submit:
 
     # 加载模型和特征
     objective = "prognosis"
-    model_path = f"./checkpoint/{objective}/lightgbm_model.pkl"
+    model_path = f"checkpoint/{objective}/lightgbm_model.pkl"
     feature_path = f"lightgbm_selected_features.txt"
 
     try:
